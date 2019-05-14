@@ -1,0 +1,25 @@
+2019-05-14 14:54:47,277 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-05-14 14:54:47,281 p=4652 u=andrei_popa |  PLAY [all] **********************************************************************************************************
+2019-05-14 14:54:47,291 p=4652 u=andrei_popa |  TASK [Gathering Facts] **********************************************************************************************
+2019-05-14 14:54:47,539 p=4652 u=andrei_popa |  fatal: [centos-vm]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: root@10.1.2.223: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2019-05-14 14:54:47,541 p=4652 u=andrei_popa |  	to retry, use: --limit @/Users/andrei_popa/ansible-intro/playbook.retry
+
+2019-05-14 14:54:47,541 p=4652 u=andrei_popa |  PLAY RECAP **********************************************************************************************************
+2019-05-14 14:54:47,541 p=4652 u=andrei_popa |  centos-vm                  : ok=0    changed=0    unreachable=1    failed=0   
+2019-05-14 14:55:17,956 p=4727 u=andrei_popa |  ERROR! the playbook: - could not be found
+2019-05-14 14:55:22,230 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-05-14 14:55:22,234 p=4755 u=andrei_popa |  PLAY [all] **********************************************************************************************************
+2019-05-14 14:55:22,242 p=4755 u=andrei_popa |  TASK [Gathering Facts] **********************************************************************************************
+2019-05-14 14:55:22,282 p=4755 u=andrei_popa |  fatal: [centos-vm]: FAILED! => {"msg": "to use the 'ssh' connection type with passwords, you must install the sshpass program"}
+2019-05-14 14:55:22,284 p=4755 u=andrei_popa |  	to retry, use: --limit @/Users/andrei_popa/ansible-intro/playbook.retry
+
+2019-05-14 14:55:22,284 p=4755 u=andrei_popa |  PLAY RECAP **********************************************************************************************************
+2019-05-14 14:55:22,284 p=4755 u=andrei_popa |  centos-vm                  : ok=0    changed=0    unreachable=0    failed=1   
+2019-05-14 14:57:05,804 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-05-14 14:57:05,808 p=5064 u=andrei_popa |  PLAY [all] **********************************************************************************************************
+2019-05-14 14:57:05,816 p=5064 u=andrei_popa |  TASK [Gathering Facts] **********************************************************************************************
+2019-05-14 14:57:06,908 p=5064 u=andrei_popa |  ok: [centos-vm]
+2019-05-14 14:57:06,920 p=5064 u=andrei_popa |  TASK [Update system] ************************************************************************************************
+2019-05-14 14:58:41,589 p=5064 u=andrei_popa |  changed: [centos-vm]
+2019-05-14 14:58:41,591 p=5064 u=andrei_popa |  PLAY RECAP **********************************************************************************************************
+2019-05-14 14:58:41,592 p=5064 u=andrei_popa |  centos-vm                  : ok=2    changed=1    unreachable=0    failed=0   

@@ -1,4 +1,0 @@
-[master]
-centos-vm    ansible_connection=ssh  ansible_host=192.x.x.x
-[slave]
-boobuntu-vm  ansible_connection=ssh  ansible_host=192.x.x.x
