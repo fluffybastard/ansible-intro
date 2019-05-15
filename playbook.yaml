@@ -1,7 +1,7 @@
 ---
 - hosts: targets
   tasks:
-  
+
   - name: Set SELinux on permissive mode
     selinux:
       policy: targeted
@@ -18,8 +18,9 @@
       state: latest
 
   - name: Print REPOS
-    shell: yum repolist
+    command: yum repolist
     args:
         warn: false
     register: repos
+    
   - debug: msg="{{ repos.stdout }}"
