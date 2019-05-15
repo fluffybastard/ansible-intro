@@ -1,8 +1,21 @@
 ---
-- hosts: all
-  remote_user: root
+- hosts: targets
   tasks:
+  - name: Set SELinux on permissive mode
+    selinux:
+      policy: targeted
+      state: permissive
   - name: Update system
     yum:
       name: '*'
       state: latest
+  - name: Install EPEL
+    yum:
+      name: "epel-release"
+      state: latest
+  - name: Print REPOS
+    shell: yum repolist
+    args:
+        warn: false
+    register: repos
+  - debug: msg="{{ repos.stdout }}"
