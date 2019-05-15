@@ -1,7 +1,5 @@
 ---
 - hosts: targets
-  # var_files:
-  #   - ~/vars/web-server.yaml
     
   tasks:
   - name: Set SELinux on permissive mode
