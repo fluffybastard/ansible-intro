@@ -1,7 +1,9 @@
 ---
 - hosts: targets
+  # var_files:
+  #   - ~/vars/web-server.yaml
+    
   tasks:
-
   - name: Set SELinux on permissive mode
     selinux:
       policy: targeted
@@ -22,5 +24,23 @@
     args:
         warn: false
     register: repos
-    
+
   - debug: msg="{{ repos.stdout }}"
+
+  - name: Install APACHE web server
+    yum: name=httpd
+    when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "7"
+
+  - name: Uninstall APACHE web server
+    yum:
+      name: "{{ item }}"
+      state: absent
+    loop:
+      - httpd
+      - httpd-tools
+    when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "7"
+
+  - name: Install NGINX web server
+    package: 
+      name: "{{ web_server }}"
+      state: latest
