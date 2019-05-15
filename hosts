@@ -1,0 +1,2 @@
+[targets]
+centos7 ansible_host=192.168.1.18 ansible_port=22
