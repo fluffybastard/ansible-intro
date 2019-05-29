@@ -81,7 +81,17 @@ ansible targets -m shell -a 'cat /etc/redhat-release'
 centos7 | CHANGED | rc=0 >>
 CentOS Linux release 7.6.1810 (Core)
 ```
+```
+ansible targets -m shell -a 'free -mlwt'
 
+centos7 | CHANGED | rc=0 >>
+              total        used        free      shared     buffers       cache   available
+Mem:           1838         133        1087           8           4         612        1503
+Low:           1838         750        1087
+High:             0           0           0
+Swap:          2047           0        2047
+Total:         3886         133        3135
+```
 ### Run the playbook
 ```
 ansible-playbook -i hosts playbook.yaml
