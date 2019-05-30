@@ -19,8 +19,8 @@ Each Playbook maps a group of hosts to a set of roles. Each role is represented 
 ```
 ├── hosts
 ├── playbooks
-│   ├── project1-staging.yml
-│   └── project1-production.yml
+│   ├── project1.yml
+│   └── project2.yml
 ├── roles
 │   └── project1
 │       ├── files
