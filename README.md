@@ -1,7 +1,7 @@
 # ansible-intro
 Introduction to Ansible
 
-## What it Ansible
+## What is Ansible
 
 Ansible is an open-source automation platform. It can help with configuration management, application management, task automation. 
 
