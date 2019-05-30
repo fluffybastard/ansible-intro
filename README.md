@@ -1,7 +1,7 @@
 # ansible-intro
 Introduction to Ansible
 
-## What is it
+## What it Ansible
 
 Ansible is an open-source automation platform. It can help with configuration management, application management, task automation. 
 
@@ -92,7 +92,7 @@ High:             0           0           0
 Swap:          2047           0        2047
 Total:         3886         133        3135
 ```
-### Run the playbook
+### Run this playbook
 ```
 ansible-playbook -i hosts playbook.yaml
 ```
